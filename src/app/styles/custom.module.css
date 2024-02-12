@@ -1,0 +1,92 @@
+/* @import url(https://fonts.googleapis.com/css?family=Exo:100); */
+
+
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% { background-position: 50px -50px; }
+}
+@-moz-keyframes    bg-scrolling-reverse {
+  100% { background-position: 50px -50px; }
+
+}
+@-o-keyframes      bg-scrolling-reverse {
+  100% { background-position: 50px -50px; }
+
+}
+@keyframes         bg-scrolling-reverse {
+  100% { background-position: 50px -50px; }
+
+}
+
+@-webkit-keyframes bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+@-moz-keyframes    bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+@-o-keyframes      bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+@keyframes         bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+
+/* Main styles */
+.bg_div {
+  min-height: 70%;
+  min-width: 30%;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  /* border-radius: 100% 0 0 0; */
+  /* margin-top: 13.5rem; */
+  /* filter: invert(1); */
+  color: #999;
+  /* img size is 50x50 */
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAALlJREFUaEPtmsEJwzAUxb5XcFY0pEM5IzYruGSFB4I6yHc9YsnHtPP8rOua1ftRu577/larqjXGqDnnrveo5/tb78d6brT78SL/VtAiFoEM+LQgsfGsRWJ1EGgRSGw8a5FYHQRaBBIbz1okVgeBFoHExrMWidVBoEUgsfGsRWJ1EGgRSGw8a5FYHQRaBBIbz1okVgeBFoHExrMWidVBoEUgsfGsRWJ1EGgRSGw8a5FYHQS+p8hb/tf6Ad8AzWWjUU0BAAAAAElFTkSuQmCC) repeat 0 0;
+  
+  -webkit-animation: bg-scrolling-reverse 5s infinite; /* Safari 4+ */
+  -moz-animation:    bg-scrolling-reverse 5s infinite; /* Fx 5+ */
+  -o-animation:      bg-scrolling-reverse 5s infinite; /* Opera 12+ */
+  animation:         bg-scrolling-reverse 5s infinite; /* IE 10+ */
+  -webkit-animation-timing-function: ease-in ;
+  -moz-animation-timing-function:    ease-in ;
+  -o-animation-timing-function:      ease-in ;
+  animation-timing-function:         ease-in ;
+  
+  .bg_div::before {    
+
+    font-size: 8rem;
+    font-weight: 100;
+    font-style: normal;
+  }
+}
+
+.kite {
+  position: relative;
+  width: 0;
+  height: 5px;
+  border-left: 45vw solid transparent;
+  border-right: 45vw solid transparent;
+  border-bottom: 90vw solid #3498db; /* Change the color if needed */
+  max-width: 90vw;
+}
+
+.kite:before,
+.kite:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 22.5vw solid transparent;
+  border-right: 22.5vw solid transparent;
+}
+
+.kite:before {
+  top: 0;
+  border-bottom: 45vw solid #ecf0f1; /* Change the color if needed */
+}
+
+.kite:after {
+  bottom: 0;
+  border-top: 45vw solid #ecf0f1; /* Change the color if needed */
+}
