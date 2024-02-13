@@ -46,7 +46,9 @@ export default function Home() {
   useEffect(() => {
     // 👇️ scroll to top on page load
     // window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    
     AOS.init({ duration: 1000 ,once:true});
+    
   }, []);
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
