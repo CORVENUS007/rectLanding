@@ -1,7 +1,7 @@
 "use client";
 import SendSharpIcon from "@mui/icons-material/SendSharp";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 import {
   ChevronRightIcon,
   ArrowLongRightIcon,
@@ -46,6 +46,7 @@ export default function Home() {
   useEffect(() => {
     // 👇️ scroll to top on page load
     // window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    AOS.init({ duration: 1000 ,once:true});
   }, []);
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -65,6 +66,9 @@ export default function Home() {
         <div className={styles.desc_container}>
           <div>
             <h1
+              data-aos="zoom-in"
+              data-aos-duration="2000"
+              data-aos-easing="ease-in-out"
               className={[
                 styles.font_size_56,
                 styles.font_weight_400,
@@ -90,6 +94,10 @@ export default function Home() {
         <br />
         <div className={styles.padding_16}></div>
         <span
+          data-aos="slide-right"
+          data-aos-duration="2000"
+          data-aos-easing="ease-out"
+          data-aos-delay="200"
           className={[
             styles.font_gradient,
             styles.font_size_108,
@@ -104,6 +112,9 @@ export default function Home() {
         </span>
         <div className={styles.padding_32}></div>
         <h2
+          data-aos="zoom-in"
+          data-aos-duration="2000"
+          data-aos-easing="ease-in-out"
           className={[
             styles.color_grey,
             styles.font_weight_100,
@@ -115,7 +126,13 @@ export default function Home() {
         <div className={styles.padding_16}></div>
         {/* request invitation button */}
         {/* <div></div> */}
-        <ul className="flex gap-4 list-none text-gray-200 mr-[78px]">
+        <ul
+          data-aos="slide-right"
+          data-aos-duration="2000"
+          data-aos-easing="ease-out"
+          data-aos-delay="200"
+          className="flex gap-4 list-none text-gray-200 mr-[78px]"
+        >
           {links.map((link) => (
             <li key={link}>
               <button>
@@ -134,12 +151,20 @@ export default function Home() {
         <div className={styles.padding_56}></div>
         <div className={styles.padding_16}></div>
         {/* my products section  */}
-        <div className="text-[56px]  font-normal">
+        <div
+          className="text-[56px]  font-normal"
+          data-aos="slide-right"
+          data-aos-duration="2000"
+          data-aos-easing="ease-in-out"
+        >
           Secure way to entend your runway
         </div>
         <h2
           style={{ color: "#d8dee6" }}
           className="text-2xl   pl-1 mb-10 font-thin"
+          data-aos="slide-left"
+          data-aos-duration="2000"
+          data-aos-easing="ease-in-out"
         >
           Automatically put your funds to work with a competitive annual yield
           and move even closer to your goals
@@ -156,6 +181,10 @@ export default function Home() {
                 alt="rectlogo"
               ></Image> */}
             <Image
+              data-aos="zoom-in-up"
+              data-aos-delay="50"
+              data-aos-duration="2000"
+              data-aos-easing="ease-in-out"
               className="basis-1/2 w-[100%]     rounded-[36px] hover:shadow-[10px_10px_60px_10px_rgba(255,255,255,0.2)] hover:-translate-y-4 transition-transform duration-300 ease-in-out"
               src={intro}
               alt="rectlogo"
@@ -165,6 +194,10 @@ export default function Home() {
             {/* <div  className="basis-1/2 border-black rounded-[32px] hover:shadow-[10px_10px_60px_10px_rgba(255,255,255,0.3)] hover:-translate-y-10 transition-transform duration-300 ease-in-out"> */}{" "}
             {/* <Card H="400px" W="100%" ImageSrc={links[2]}></Card>{" "} */}
             <Image
+              data-aos="slide-left"
+              data-aos-delay="50"
+              data-aos-duration="1500"
+              data-aos-easing="ease-in-out"
               className="basis-1/2 w-[45%]  rounded-[36px]  hover:shadow-[10px_10px_60px_10px_rgba(255,255,255,0.2)] hover:-translate-y-4 transition-transform duration-300 ease-in-out"
               src={wealth}
               alt="rectlogo"
@@ -173,6 +206,10 @@ export default function Home() {
             {/* <div className="basis-1/2 border-white rounded-[32px] hover:shadow-[10px_10px_60px_10px_rgba(255,255,255,0.3)] hover:-translate-y-10 transition-transform duration-300 ease-in-out"> */}{" "}
             {/* <Card H="400px" W="100%" ImageSrc={links[1]}></Card> */}
             <Image
+              data-aos="slide-right"
+              data-aos-delay="50"
+              data-aos-duration="1500"
+              data-aos-easing="ease-in-out"
               className="basis-1/2 w-[45%]    rounded-[36px] hover:shadow-[10px_10px_60px_10px_rgba(255,255,255,0.2)] hover:-translate-y-4 transition-transform duration-300 ease-in-out"
               src={treasury}
               alt="rectlogo"
@@ -182,10 +219,21 @@ export default function Home() {
         </div>
         <div className={styles.padding_56}></div>
         <div>
-          <div className="text-[56px] text-normal">AutoPilot</div>
+          <div
+            className="text-[56px] text-normal"
+            data-aos="zoom-in-right"
+            data-aos-duration="2000"
+            data-aos-delay="50"
+            data-aos-easing="ease-in-out"
+          >
+            AutoPilot
+          </div>
           <h2
             style={{ color: "#d8dee6" }}
             className="text-2xl   pl-1 mb-10 font-thin"
+            data-aos="zoom-in-right"
+            data-aos-duration="2000"
+            data-aos-easing="ease-in-out"
           >
             Put your cash management strategy on autopilot. Start automating to
             start growing your money
@@ -198,7 +246,13 @@ export default function Home() {
                   alt="shadow"
                   height={400}
                 ></Image>{" "} */}
-            <div className="h-[400px] w-[500px]     flex items-center justify-center">
+            <div
+              data-aos="zoom-in-up"
+              data-aos-delay="50"
+              data-aos-duration="2000"
+              data-aos-easing="ease-in-out"
+              className="h-[400px] w-[500px]     flex items-center justify-center"
+            >
               {" "}
               <Switch></Switch>
             </div>
@@ -207,18 +261,34 @@ export default function Home() {
         <div className={styles.padding_56}></div>
         <div className="flex flex-col gap-6 ">
           <div className="flex flex-col  ">
-            <div className="text-[56px] text-normal ">
+            <div
+              className="text-[56px] text-normal "
+              data-aos="fade-up"
+              data-aos-delay="50"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+            >
               Returns with peace of mind
             </div>
             <h2
               style={{ color: "#d8dee6" }}
               className="text-2xl   pl-1  font-thin"
+              data-aos="fade-up"
+              data-aos-delay="50"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
             >
               A cash management experience that grows with you
             </h2>
           </div>
 
-          <div className="relative h-[600px] ">
+          <div
+            className="relative h-[600px] "
+            data-aos="fade-up"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+          >
             <Image
               src={dotGrid}
               alt="Your Image"
@@ -228,7 +298,13 @@ export default function Home() {
               <div className=" flex flex-col gap-20 p-20  h-full bg-gradient-to-r rounded-[16px] from-white/15 to-black ">
                 <div className="flex justify-between gap-10">
                   {" "}
-                  <div className="flex flex-col w-96 text-justify ">
+                  <div
+                    data-aos="zoom-out-right"
+                    data-aos-duration="2000"
+                    data-aos-delay="200"
+                    data-aos-easing="ease-in-out"
+                    className="flex flex-col w-96 text-justify "
+                  >
                     {" "}
                     <div>
                       <ShieldCheckIcon className="h-10 opacity-90"></ShieldCheckIcon>
@@ -242,7 +318,13 @@ export default function Home() {
                       mutual funds and treasury bills.
                     </div>
                   </div>{" "}
-                  <div className="flex flex-col w-96 text-justify ">
+                  <div
+                    data-aos="zoom-out-right"
+                    data-aos-duration="2000"
+                    data-aos-delay="100"
+                    data-aos-easing="ease-in-out"
+                    className="flex flex-col w-96 text-justify "
+                  >
                     {" "}
                     <div>
                       <CurrencyRupeeIcon className="h-10 opacity-70"></CurrencyRupeeIcon>{" "}
@@ -255,7 +337,13 @@ export default function Home() {
                       that earn up to 7.17% APY*.
                     </div>
                   </div>{" "}
-                  <div className="flex flex-col w-96 text-justify ">
+                  <div
+                    data-aos="zoom-out-right"
+                    data-aos-duration="2000"
+                    data-aos-delay="100"
+                    data-aos-easing="ease-in-out"
+                    className="flex flex-col w-96 text-justify "
+                  >
                     {" "}
                     <div>
                       <BoltIcon className="h-10 opacity-70"></BoltIcon>{" "}
@@ -272,7 +360,13 @@ export default function Home() {
 
                 <div className="flex justify-between gap-10">
                   {" "}
-                  <div className="flex flex-col w-96 text-justify ">
+                  <div
+                    data-aos="zoom-out-left"
+                    data-aos-duration="2000"
+                    data-aos-delay="100"
+                    data-aos-easing="ease-in-out"
+                    className="flex flex-col w-96 text-justify "
+                  >
                     {" "}
                     <div>
                       {" "}
@@ -287,7 +381,13 @@ export default function Home() {
                       most of uninvested cash.
                     </div>
                   </div>{" "}
-                  <div className="flex flex-col w-96 text-justify ">
+                  <div
+                    data-aos="zoom-out-left"
+                    data-aos-duration="2000"
+                    data-aos-delay="100"
+                    data-aos-easing="ease-in-out"
+                    className="flex flex-col w-96 text-justify "
+                  >
                     {" "}
                     <div>
                       <Cog6ToothIcon className="h-10 opacity-70"></Cog6ToothIcon>
@@ -300,7 +400,13 @@ export default function Home() {
                       banks to provide a true self-serve onboarding experience.
                     </div>
                   </div>{" "}
-                  <div className="flex flex-col w-96 text-justify ">
+                  <div
+                    data-aos="zoom-out-left"
+                    data-aos-duration="2000"
+                    data-aos-delay="100"
+                    data-aos-easing="ease-in-out"
+                    className="flex flex-col w-96 text-justify "
+                  >
                     {" "}
                     <div>
                       <UserGroupIcon className="h-10 opacity-70"></UserGroupIcon>
@@ -323,18 +429,33 @@ export default function Home() {
         <div className="flex flex-col gap-10">
           {" "}
           <div className="flex flex-col  ">
-            <div className="text-[56px] text-normal ">
+            <div
+              className="text-[56px] text-normal "
+              data-aos="slide-right"
+              data-aos-duration="2000"
+              data-aos-easing="ease-in-out"
+            >
               Simple and transparent pricing
             </div>
             <h2
               style={{ color: "#d8dee6" }}
               className="text-2xl   pl-1  font-thin"
+              data-aos="slide-left"
+              data-aos-duration="2000"
+              data-aos-delay="50"
+              data-aos-easing="ease-in-out"
             >
               rect. pricing accommodates your business, whether you are
               bootstrapped or supported by venture capital.
             </h2>
           </div>
-          <div className="w-full relative bg-gradient-to-l  from-white/15 to-black  rounded-[16px] ">
+          <div
+            data-aos="slide-left"
+            data-aos-duration="2000"
+            data-aos-delay="50"
+            data-aos-easing="ease-in-out"
+            className="w-full relative bg-gradient-to-l  from-white/15 to-black  rounded-[16px] "
+          >
             <Image src={fees} alt="fees "></Image>
             <div
               className={[
@@ -349,12 +470,22 @@ export default function Home() {
         <div className={styles.padding_16}></div>
         <div className={styles.padding_56}></div>
         <div style={{ padding: "none" }}>
-          <div className="text-[56px] text-normal ">
+          <div
+            className="text-[56px] text-normal "
+            data-aos="zoom-out-left"
+            data-aos-duration="8000"
+            data-aos-delay="500"
+            data-aos-easing="ease-in-out"
+          >
             Unparalleled security and support
           </div>
           <h2
             style={{ color: "#d8dee6" }}
             className="text-2xl   pl-1 mb-10 font-thin"
+            data-aos="zoom-out-left"
+            data-aos-duration="8000"
+            data-aos-delay="500"
+            data-aos-easing="ease-in-out"
           >
             Securely manage your finances with dedicated white-glove support
           </h2>
@@ -362,7 +493,12 @@ export default function Home() {
             ref={ref}
             style={{ scale: scaleProgress, opacity: opacityProgress }}
           > */}
-          <div>
+          <div
+            data-aos="zoom-out-left"
+            data-aos-duration="8000"
+            data-aos-delay="500"
+            data-aos-easing="ease-in-out"
+          >
             {" "}
             <Image src={security} alt="frame" height={900}></Image>
           </div>
@@ -393,22 +529,39 @@ export default function Home() {
         {/* <div className={styles.padding_56}></div> */}
         <div className="h-[700px] flex items-center justify-center  relative ">
           {" "}
-          <Image src={frame} alt="frame" fill={true}></Image>
-          <div className="absolute bottom-[228px] left-auto text-5xl mr-5">
+          <Image
+            data-aos="zoom-in"
+            data-aos-delay="200"
+            data-aos-duration="2000"
+            data-aos-easing="ease-in-out"
+            src={frame}
+            alt="frame"
+            fill={true}
+          ></Image>
+          <div
+            data-aos="zoom-in-up"
+            data-aos-delay="1200"
+            data-aos-duration="2000"
+            data-aos-easing="ease-out"
+            className="absolute bottom-[228px] left-auto text-5xl mr-5"
+          >
             Building future together.
           </div>
-          <div className="absolute bottom-[170px] left-auto text-5xl mr-5">
+          <div
+            data-aos="zoom-in-up"
+            data-aos-delay="1600"
+            data-aos-duration="2200"
+            data-aos-easing="ease-out"
+            className="absolute bottom-[170px] left-auto text-5xl mr-5"
+          >
             {" "}
-            <ul className="flex gap-4 list-none text-gray-200 mr-[22px]">
+            <ul className="flex gap-4 list-none text-gray-200 mr-[46px]">
               {links.map((link) => (
                 <li key={link}>
                   <button>
                     <a
                       href="mailto:hello@rect.money?subject=Get Invitation - Rect."
-                      className={[
-                        styles.button_theme,
-                        "text-base ",
-                      ].join(" ")}
+                      className={[styles.button_theme, "text-base "].join(" ")}
                     >
                       <span>{link}</span>
                       {/* <ArrowForwardIosIcon className={styles.button_icon} /> */}
