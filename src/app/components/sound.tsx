@@ -18,7 +18,7 @@ const SoundButton: React.FC<SoundButtonProps> = ({
     const newSound = new Howl({
       src: [soundSrc], // Array for different file types or fallbacks
       autoplay: false, // Disable autoplay
-      loop: false, // Disable looping by default
+      loop: true, // Disable looping by default
       volume: 1, // Set initial volume
     });
     setSound(newSound);
