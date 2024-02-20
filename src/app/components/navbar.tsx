@@ -2,7 +2,10 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../page.module.css";
+import Example from "./hoveredbutton";
+import { Example2 } from "./hoveredbutton";
 import "../page.module.css";
+import Reveal from "./reveal";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import {
   ArrowLongRightIcon,
@@ -18,10 +21,10 @@ const links = ["Get Invite"];
 
 export const Top = () => {
   return (
-    <div className="bg-black/5  backdrop-blur-3xl z-50 fixed w-[100%] ">
-      <nav className=" flex justify-between items-center  px-4 py-[12px]">
+    <div className="bg-black/5  backdrop-blur-3xl z-50 fixed w-[100vw] ">
+      <nav className=" flex justify-between w-full lg:px-24 xs:px-7  py-4">
         {/* rect-logo */}{" "}
-        <div className="relative h-10 w-20 ml-[78px]">
+        <div className="relative h-10 w-20 ">
           {/* image */}
           <Link href={"/pages/apis/home"}>
             <Image
@@ -48,7 +51,7 @@ export const Top = () => {
         >
           welcome to rect. demo
         </span> */}
-        <div className=" ml-auto flex gap-10 text-xs    mr-12 align-baseline  decoration-0 text-gray-500 ">
+        {/* <div className=" ml-auto flex gap-10 text-xs    mr-12 align-baseline  decoration-0 text-gray-500 ">
           <a
             href="https://rect.money/"
             target="_blank"
@@ -56,6 +59,7 @@ export const Top = () => {
           >
             About Us
           </a>
+          <Example></Example> 
 
           <a
             href="https://rect.money/"
@@ -64,24 +68,28 @@ export const Top = () => {
           >
             Resources
           </a>
-        </div>
+          <Example2></Example2>
+        </div> */}
         {/* get invite button */}
-        <ul className="flex gap-4 list-none text-gray-200 mr-[80px]  ">
-          {links.map((link) => (
-            <li key={link}>
-              <button>
-                <a
-                  href="mailto:hello@rect.money?subject=Get Invitation - Rect."
-                  className={[styles.button_theme, "text-base"].join(" ")}
-                >
-                  <span>{link}</span>
-                  {/* <ArrowForwardIosIcon className={styles.button_icon} /> */}
-                  <ChevronRightIcon className="h-4 pl-[1px] pb-[1px]"></ChevronRightIcon>
-                </a>
-              </button>
-            </li>
-          ))}
-        </ul>
+        <div>
+          {" "}
+          <ul className="flex gap-4 list-none text-gray-200   ">
+            {links.map((link) => (
+              <li key={link}>
+                <button>
+                  <a
+                    href="mailto:hello@rect.money?subject=Get Invitation - Rect."
+                    className={[styles.button_theme, "text-base"].join(" ")}
+                  >
+                    <span>{link}</span>
+                    {/* <ArrowForwardIosIcon className={styles.button_icon} /> */}
+                    <ChevronRightIcon className="h-4 pl-[1px] pb-[1px]"></ChevronRightIcon>
+                  </a>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
       </nav>
     </div>
   );

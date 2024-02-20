@@ -113,6 +113,23 @@
   justify-content: space-between !important;
 }
 
+/* styles.css */
+
+.gradient_background {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    111.15deg,
+    hsla(0, 0%, 85%, 0.27) -8.89%,
+    hsla(0, 0%, 97%, 0.97) 40.62%,
+    hsla(0, 0%, 85%, 0.68) 84.59%
+  );
+  z-index: 20;
+}
+
 .font_gradient {
   background-clip: text;
   animation: textShine 5s ease-in-out infinite;
@@ -479,4 +496,37 @@
   .built_for {
     font-size: 60px !important;
   }
+}
+
+.wrapper {
+  height: 100vh;
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
+}
+
+.typingdemo {
+  width: 25ch;
+  animation: typing 2s steps(25), blink 0.8s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.background_dot{
+  background-image: url('../../public/dotGrid.svg');
 }
