@@ -1,7 +1,6 @@
-import React, { Children, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
-import { relative } from "path";
-import { Hidden } from "@mui/material";
+
 
 interface Props {
   children: React.JSX.Element;

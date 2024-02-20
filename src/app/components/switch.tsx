@@ -35,9 +35,7 @@ const Switch: React.FC = () => {
         boxShadow:
           "inset 0 15px 15px  rgba(157,157,176,.3) ,0px 0px 800px 0px #737373",
       }}
-      // onClick={() => {
-      //   setIsSelected2(!isSelected2);
-      // }}
+     
       className={classNames(
         "flex lg:w-[390px]  lg:h-[216px] xs:w-64 xs:h-32 bg-gradient-to-l from-black to-black m-10  items-center rounded-full transition duration-1000 ease-out delay-300 ",
         {
